@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "https://www.oakcollc.com/*"
+  to = "https://oakcollc.com/:splat"
+  status = 301
+  force = true

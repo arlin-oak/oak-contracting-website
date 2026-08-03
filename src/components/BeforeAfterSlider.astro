@@ -1,0 +1,20 @@
+---
+const { before, after, title, text, id } = Astro.props;
+---
+<article class="slider-project">
+  <div class="slider-shell" data-slider={id}>
+    <img class="slider-image" src={before} alt={`${title} before`} loading="lazy" />
+    <div class="slider-after-wrap">
+      <img class="slider-image" src={after} alt={`${title} after`} loading="lazy" />
+    </div>
+    <input class="slider-range" type="range" min="0" max="100" value="52" aria-label={`Compare before and after for ${title}`} />
+    <div class="slider-handle" aria-hidden="true"><span>‹</span><span>›</span></div>
+    <span class="slider-label before-label">Before</span>
+    <span class="slider-label after-label">After</span>
+  </div>
+  <div class="slider-copy">
+    <p class="eyebrow">Before & After</p>
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+</article>
