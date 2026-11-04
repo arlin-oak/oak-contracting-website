@@ -1,0 +1,421 @@
+
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+
+const photoFolder = "/assets/projects/haverhill/";
+
+const photos = [
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.50 PM (1).jpeg",
+    alt: "Complete metal exterior on a custom Kansas home"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.50 PM (2).jpeg",
+    alt: "Textured black siding and Ash Gray metal roofing"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.50 PM (3).jpeg",
+    alt: "Metal exterior and garage on Haverhill project"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.50 PM (4).jpeg",
+    alt: "Covered porch with metal roofing and siding"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.50 PM.jpeg",
+    alt: "Custom home metal exterior installation"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.51 PM (1).jpeg",
+    alt: "Standing seam metal roof and exterior siding"
+  },
+  {
+    file: "WhatsApp Image 2026-11-02 at 8.06.51 PM.jpeg",
+    alt: "Finished metal exterior on Kansas new construction"
+  }
+];
+
+const photoUrl = (file) =>
+  photoFolder + encodeURIComponent(file);
+---
+
+<BaseLayout
+  title="Metal Siding for New Homes in Kansas | Oak Contracting LLC"
+  description="Explore complete metal exteriors for new construction homes in Kansas, featuring a real Oak Contracting project with textured standing seam roofing and metal siding."
+>
+  <Header />
+
+  <main class="article-page">
+    <article class="article-container">
+
+      <a class="back-link" href="/blog/">
+        ← Back to Blog
+      </a>
+
+      <p class="eyebrow">METAL EXTERIORS · KANSAS</p>
+
+      <h1>
+        Complete Metal Exteriors for New Construction Homes:
+        A Kansas Contractor's Perspective
+      </h1>
+
+      <p class="intro">
+        A new home's exterior is about more than appearance.
+        It's an investment in protection, durability, and
+        long-term value. Here's how we approach complete
+        metal exterior projects at Oak Contracting LLC.
+      </p>
+
+      <img
+        class="hero-image"
+        src={photoUrl(photos[0].file)}
+        alt={photos[0].alt}
+        fetchpriority="high"
+      />
+
+      <p class="caption">
+        Haverhill project near Augusta, Kansas —
+        exterior finish completed by Oak Contracting LLC.
+      </p>
+
+      <h2>Our Haverhill Project Near Augusta, Kansas</h2>
+
+      <p>
+        We recently completed the full exterior finish
+        on a new construction home in the Haverhill area
+        near Augusta, Kansas.
+      </p>
+
+      <p>
+        This project demonstrates how different metal
+        profiles, finishes, and colors can work together
+        to create a distinctive exterior.
+      </p>
+
+      <ul>
+        <li>Textured Ash Gray standing seam metal roofing</li>
+        <li>Textured black metal siding</li>
+        <li>Textured black soffit and fascia</li>
+        <li>Woodgrain board-and-batten porch accents</li>
+        <li>Horizontal corrugated metal garage accents</li>
+      </ul>
+
+      <p>
+        The contrast between the Ash Gray roof and black
+        siding creates a bold appearance. Woodgrain accents
+        introduce warmth, while the horizontal corrugated
+        panels add architectural interest.
+      </p>
+
+      <div class="photo-grid">
+        {photos.slice(1, 3).map((photo) => (
+          <img
+            src={photoUrl(photo.file)}
+            alt={photo.alt}
+            loading="lazy"
+          />
+        ))}
+      </div>
+
+      <h2>Why Choose Metal Siding for a New Home?</h2>
+
+      <p>
+        Metal siding isn't limited to agricultural buildings.
+        Today's metal products offer a wide range of profiles,
+        colors, and finishes for custom residential construction.
+      </p>
+
+      <p>
+        Homeowners can combine vertical panels, board-and-batten
+        styles, horizontal accents, and other exterior materials
+        to achieve the appearance they want.
+      </p>
+
+      <p>
+        When properly selected and installed, metal siding can
+        offer excellent durability and long-term performance.
+        The right product depends on the home's design,
+        budget, and the owner's expectations.
+      </p>
+
+      <h2>Does Metal Thickness Matter?</h2>
+
+      <p>
+        Generally speaking, heavier-gauge metal can offer
+        greater resistance to physical damage. However,
+        not every home requires the heaviest available panel.
+      </p>
+
+      <p>
+        At Oak Contracting, we work with quality metal products
+        and help customers choose materials that fit their
+        particular project.
+      </p>
+
+      <p>
+        Sometimes a standard panel is an excellent choice.
+        Other times, upgrading to a heavier material or
+        different panel system makes sense.
+      </p>
+
+      <h2>Textured Metal vs. Smooth Metal</h2>
+
+      <p>
+        Both the Ash Gray standing seam roof and black siding
+        on our Haverhill project feature textured finishes.
+      </p>
+
+      <p>
+        Textured metal offers a subdued, matte appearance
+        and can help make minor panel waviness, sometimes
+        called oil canning, less noticeable.
+      </p>
+
+      <p>
+        For homeowners who prefer a less reflective exterior,
+        textured finishes are worth considering.
+      </p>
+
+      <div class="photo-grid">
+        {photos.slice(3, 5).map((photo) => (
+          <img
+            src={photoUrl(photo.file)}
+            alt={photo.alt}
+            loading="lazy"
+          />
+        ))}
+      </div>
+
+      <h2>Why Consider Standing Seam Roofing?</h2>
+
+      <p>
+        Standing seam roofing uses concealed fastening
+        methods rather than exposing the primary panel
+        fasteners directly to the weather.
+      </p>
+
+      <p>
+        This can offer maintenance advantages while
+        creating clean architectural lines.
+        Proper flashing and installation remain essential.
+      </p>
+
+      <p>
+        Standing seam generally costs more than traditional
+        exposed-fastener metal roofing, so homeowners should
+        consider their budget and long-term expectations.
+      </p>
+
+      <h2>Why Installation Details Matter</h2>
+
+      <p>
+        One of the biggest mistakes we see in building repairs
+        is addressing only the visible problem without
+        investigating what's happening underneath.
+      </p>
+
+      <p>
+        Proper preparation, flashing, fastening, and transitions
+        are important to the performance of any exterior.
+      </p>
+
+      <p>
+        Our approach is to understand the building, identify
+        potential problems, and address them correctly rather
+        than simply covering them up.
+      </p>
+
+      <h2>Why We Enjoy Complete Exterior Projects</h2>
+
+      <p>
+        Complete exterior projects allow us to focus on
+        how every component works together, from the
+        roof and siding to the soffit, fascia, and accents.
+      </p>
+
+      <p>
+        We take pride in handling complicated details
+        and delivering work we're proud to put our name on.
+      </p>
+
+      <p>
+        One of the best compliments we can receive is
+        hearing that we made the construction process
+        seem easy and that the finished result exceeded
+        the customer's expectations.
+      </p>
+
+      <div class="photo-grid">
+        {photos.slice(5).map((photo) => (
+          <img
+            src={photoUrl(photo.file)}
+            alt={photo.alt}
+            loading="lazy"
+          />
+        ))}
+      </div>
+
+      <h2>Planning a New Home in Central Kansas?</h2>
+
+      <p>
+        Oak Contracting LLC specializes in complete metal
+        exterior finishes, metal roofing, siding, and
+        agricultural and commercial building repairs.
+      </p>
+
+      <p>
+        Based in Partridge, Kansas, we serve Hutchinson,
+        Reno County, and surrounding Central Kansas communities.
+      </p>
+
+      <div class="contact-box">
+        <h2>Let's Talk About Your Project</h2>
+        <p>
+          Planning a new home or considering a complete
+          metal exterior? We'd welcome the opportunity
+          to discuss your project.
+        </p>
+        <a href="/#contact" class="contact-button">
+          Request an Estimate
+        </a>
+        <a href="tel:+16203143557" class="phone-link">
+          Call (620) 314-3557
+        </a>
+      </div>
+
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .article-page {
+    background: #f6f6f4;
+    color: #252525;
+    padding: 65px 20px 90px;
+  }
+
+  .article-container {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #777;
+  }
+
+  h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+    margin: 15px 0 25px;
+  }
+
+  .intro {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 35px;
+  }
+
+  .caption {
+    font-size: 13px;
+    color: #777;
+    margin: 10px 0 45px;
+  }
+
+  h2 {
+    font-size: 29px;
+    margin: 50px 0 20px;
+    line-height: 1.3;
+  }
+
+  p, li {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .contact-box {
+    background: #25262c;
+    color: white;
+    padding: 35px;
+    border-radius: 8px;
+    margin-top: 55px;
+  }
+
+  .contact-box h2 {
+    margin-top: 0;
+  }
+
+  .contact-button {
+    display: inline-block;
+    background: white;
+    color: #222;
+    padding: 13px 20px;
+    margin: 15px 15px 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+
+  .phone-link {
+    color: white;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 600px) {
+    .article-page {
+      padding: 40px 18px 65px;
+    }
+
+    .photo-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-grid img {
+      height: auto;
+    }
+
+    .contact-box {
+      padding: 25px;
+    }
+  }
+</style>
