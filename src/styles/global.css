@@ -32,41 +32,20 @@ body {
 
   .slider-shell {
     max-width: 100%;
-  }
-}
 
-/* Mobile layout overflow protection */
-html {
-  width: 100%;
-  overflow-x: clip;
-}
-
-body {
-  width: 100%;
-  min-width: 0;
-  overflow-x: clip;
-}
-
+/* Improve homepage headline on mobile */
 @media (max-width: 640px) {
-  .hero,
-  .site-header,
-  main,
-  section {
-    max-width: 100%;
-  }
-
-  .hero-content,
-  .nav-wrap,
-  .container {
-    min-width: 0;
-  }
-
   .hero h1 {
-    max-width: 100%;
-    overflow-wrap: break-word;
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   }
 
-  .slider-shell {
-    max-width: 100%;
+  .hero-content {
+    padding-block: 65px;
+  }
+
+  .hero {
+    min-height: 0;
   }
 }
