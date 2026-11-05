@@ -34,3 +34,39 @@ body {
     max-width: 100%;
   }
 }
+
+/* Mobile layout overflow protection */
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .site-header,
+  main,
+  section {
+    max-width: 100%;
+  }
+
+  .hero-content,
+  .nav-wrap,
+  .container {
+    min-width: 0;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .slider-shell {
+    max-width: 100%;
+  }
+}
