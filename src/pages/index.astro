@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import BeforeAfterSlider from "../components/BeforeAfterSlider.astro";
 ---
 <BaseLayout
   title="Oak Contracting LLC | Construction & Metal Roofing in Central Kansas"
@@ -100,32 +99,7 @@ import BeforeAfterSlider from "../components/BeforeAfterSlider.astro";
       </div>
     </section>
 
-    <section class="section projects" id="projects">
-      <div class="container">
-        <div class="projects-heading">
-          <div><p class="eyebrow">Featured Projects</p><h2>Before. After. Built better.</h2></div>
-          <p>Drag each slider to compare the original space with the completed project.</p>
-        </div>
-        <div class="slider-list">
-          <BeforeAfterSlider
-            id="patio"
-            before="/assets/projects/patio-before.webp"
-            after="/assets/projects/patio-after.webp"
-            title="Covered Patio Addition"
-            text="A new covered outdoor living area tied into the existing home, adding shade, shelter and more usable backyard space."
-          />
-          <BeforeAfterSlider
-            id="porch"
-            before="/assets/projects/porch-before.webp"
-            after="/assets/projects/porch-after.webp"
-            title="Screened Porch & Accessible Entry"
-            text="A screened porch addition with deck, ramp and stairs designed to make the backyard more comfortable and accessible."
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
+    <section class="gallery-section" id="projects">
       <div class="gallery-grid">
         <figure class="gallery-large"><img src="/assets/projects/patio-after.webp" alt="Completed covered patio" loading="lazy" /><figcaption>Covered Patio Addition</figcaption></figure>
         <figure><img src="/assets/projects/porch-after.webp" alt="Completed screened porch" loading="lazy" /><figcaption>Screened Porch</figcaption></figure>
