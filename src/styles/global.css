@@ -68,3 +68,48 @@ h3{font-size:1.35rem;letter-spacing:-.02em}
 footer{background:#25282c}
 @media(max-width:900px){.site-nav{background:var(--paper)}.site-nav a{color:var(--ink)}.hero{min-height:550px}.hero-shade{background:linear-gradient(90deg,rgba(248,247,244,.96),rgba(248,247,244,.65) 75%,rgba(248,247,244,.3))}.slider-shell{height:360px}}
 @media(max-width:640px){.hero{min-height:510px}.hero-content{padding-block:65px}.hero h1{font-size:clamp(2.25rem,9vw,3.2rem)}.hero-lead{font-size:.95rem}.hero-shade{background:linear-gradient(0deg,rgba(248,247,244,.98),rgba(248,247,244,.82) 65%,rgba(248,247,244,.2))}.section,.contact{padding:62px 0}.service-grid{grid-template-columns:1fr}.slider-shell{height:300px}.hero-actions .button{width:100%}}
+/* Mobile homepage: show the cover photo above the text */
+@media (max-width: 640px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    background: var(--paper);
+    overflow: visible;
+  }
+
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+  }
+
+  .hero-shade {
+    display: none;
+  }
+
+  .hero-content {
+    width: min(calc(100% - 36px), var(--container));
+    padding-block: 32px 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1.15;
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+  }
+}
