@@ -1,9 +1,37 @@
+
 ---
 import "../styles/global.css";
+
 const {
   title = "Oak Contracting LLC",
   description = "Agricultural and commercial building repair, metal roofing, siding, soffit and fascia across Central Kansas."
 } = Astro.props;
+
+const businessInfo = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://oakcollc.com/#business",
+  name: "Oak Contracting LLC",
+  url: "https://oakcollc.com",
+  telephone: "+1-620-314-3557",
+  description:
+    "Kansas-based general contractor specializing in complete metal building exteriors, metal roofing, siding, and agricultural and commercial building repairs.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Partridge",
+    addressRegion: "KS",
+    addressCountry: "US"
+  },
+  areaServed: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 37.966,
+      longitude: -98.092
+    },
+    geoRadius: 80467
+  }
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -15,6 +43,10 @@ const {
     <link rel="icon" href="/assets/favicon.png" />
     <link rel="canonical" href={Astro.url} />
     <title>{title}</title>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(businessInfo)}
+    />
   </head>
   <body>
     <slot />
