@@ -1,4 +1,4 @@
----
+  ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 ---
@@ -154,7 +154,7 @@ import Header from "../components/Header.astro";
           </div>
         </div>
 
-        <form name="estimate-request" method="POST" data-netlify="true" netlify-honeypot="website" class="estimate-form">
+        <form name="estimate-request" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="website" class="estimate-form">
           <input type="hidden" name="form-name" value="estimate-request" />
           <p class="hidden"><label>Leave empty: <input name="website" /></label></p>
           <div class="form-row">
@@ -171,6 +171,19 @@ import Header from "../components/Header.astro";
             </select>
           </label>
           <label>Project details<textarea name="message" rows="5" required></textarea></label>
+          <label>
+            Project Photos (Optional)
+          <input
+          type="file"
+          name="project-photo"
+          accept="image/*"
+        />
+      </label>
+      <p class="photo-help">
+        A photo of the building or problem area helps us understand
+        your project. For additional pictures or plans,
+        email arlin@oakcollco.com.
+      </p>
           <button class="button primary submit" type="submit">Send Estimate Request</button>
         </form>
       </div>
